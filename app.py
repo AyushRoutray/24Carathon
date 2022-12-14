@@ -1,12 +1,14 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
-
 from flask import Flask, render_template, request, flash, redirect
 import pickle
 import numpy as np
+import ipapi
+import sys
+import collections 
+if sys.version_info.major == 3 and sys.version_info.minor >= 10:
+    from collections.abc import MutableSet
+    collections.MutableSet = collections.abc.MutableSet
+else: 
+    from collections import MutableSet
 
 app = Flask(__name__)
 
@@ -21,9 +23,8 @@ def predict_default(features):
 
     return prediction, probability
 
-@app.route("/", methods = ['GET','POST'])
+@app.route('//', methods = ['GET','POST'])
 def home():
-
     education_status = ["Graduate School", "University", "High School", "Others"]
     marital_status = ["Married","Single", "Others"]
 
@@ -64,6 +65,13 @@ def home():
         alert_message = "Please enter relevant information."
 
     return render_template("home.html", education_status = education_status, marital_status = marital_status, payment_status = payment_status, alert_message = alert_message, success_message = success_message)
+
+@app.route('/index/', methods = ['GET', 'POST'])
+def Index():
+    search = request.form.get('search')
+    data = ipapi.location(ip=search, output='json')
+    return render_template("index.html", data=data)
+ 
 
 if __name__ == '__main__':
     app.run(debug = True)

@@ -1,9 +1,6 @@
 <html>
     <head>
         <title>Credit Card Default Exposer</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="og:title" content="Credit Card Default Exposer">
-        <meta name="author" content="VIKAS BHAT">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
         <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sticky-footer/">
@@ -59,14 +56,13 @@
     <body>
         
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" style="background-color: black !important;">
-            <a href="{{ url_for('home') }}" style="color: white;font-size: 25px;">Credit Card Default</a>
+            <a href="{{ url_for('home') }}" style="color: white;font-size: 25px;">24Carat</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
              </button>
              <div class="collapse navbar-collapse" id="navbarNav">
                <ul class="navbar-nav ml-auto">
                  <li class="nav-item active">
-                   <a href="https://github.com/vbhatsaccnt/credit-card-fraud-detection-mini-project" target="_blank" class="nav-link"><span style="font-size: 20px;" class="fa fa-github"></span>&nbsp;Project Github</a>
                  </li>
                </ul>
              </div>
@@ -76,7 +72,7 @@
 
            <div class="container">
 
-           <center><h1>Credit Card Default Exposer</h1></center>
+           <center><h1>Credit Verification System</h1></center>
 
            {% if alert_message %}
             <center><div class="alert alert-danger">{{ alert_message }}</div></center>
@@ -93,7 +89,7 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input class="form-control" type="text" name="LIMIT_BAL" placeholder="Limited Balance (in New Taiwanese (NT) dollar)">
+                                <input class="form-control" type="text" name="LIMIT_BAL" placeholder="Limited Balance (in Indian Rupees)">
                             </div>
                         </div>
 
@@ -144,27 +140,13 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="BILL_AMT1" placeholder="Last month Bill Amount (in New Taiwanese (NT) dollar)">
+                                    <input type="text" class="form-control" name="BILL_AMT1" placeholder="Last month Bill Amount (in Indian Rupees)">
                                 </div>
                             </div>
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="BILL_AMT2" placeholder="Last 2nd month Bill Amount (in New Taiwanese (NT) dollar)">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="BILL_AMT3" placeholder="Last 3rd month Bill Amount (in New Taiwanese (NT) dollar)">
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="BILL_AMT4" placeholder="Last 4th month Bill Amount (in New Taiwanese (NT) dollar)">
+                                    <input type="text" class="form-control" name="BILL_AMT2" placeholder="Last 2nd month Bill Amount (in Indian Rupees)">
                                 </div>
                             </div>
                         </div>
@@ -172,13 +154,27 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="BILL_AMT5" placeholder="Last 5th month Bill Amount (in New Taiwanese (NT) dollar)">
+                                    <input type="text" class="form-control" name="BILL_AMT3" placeholder="Last 3rd month Bill Amount (in Indian Rupees)">
                                 </div>
                             </div>
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="BILL_AMT6" placeholder="Last 6th month Bill Amount (in New Taiwanese (NT) dollar)">
+                                    <input type="text" class="form-control" name="BILL_AMT4" placeholder="Last 4th month Bill Amount (in Indian Rupees)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="BILL_AMT5" placeholder="Last 5th month Bill Amount (in Indian Rupees)">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="BILL_AMT6" placeholder="Last 6th month Bill Amount (in Indian Rupees)">
                                 </div>
                             </div>
                         </div>
@@ -191,27 +187,13 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="PAY_AMT1" placeholder="Amount paid in Last Month (in New Taiwanese (NT) dollar)">
+                                    <input type="text" class="form-control" name="PAY_AMT1" placeholder="Amount paid in Last Month (in Indian Rupees)">
                                 </div>
                             </div>
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="PAY_AMT2" placeholder="Amount paid in Last 2nd Month (in New Taiwanese (NT) dollar)">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="PAY_AMT3" placeholder="Amount paid in Last 3rd Month (in New Taiwanese (NT) dollar)">
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="PAY_AMT4" placeholder="Amount paid in Last 4th Month (in New Taiwanese (NT) dollar)">
+                                    <input type="text" class="form-control" name="PAY_AMT2" placeholder="Amount paid in Last 2nd Month (in Indian Rupees)">
                                 </div>
                             </div>
                         </div>
@@ -219,13 +201,27 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="PAY_AMT5" placeholder="Amount paid in Last 5th Month (in New Taiwanese (NT) dollar)">
+                                    <input type="text" class="form-control" name="PAY_AMT3" placeholder="Amount paid in Last 3rd Month (in Indian Rupees)">
                                 </div>
                             </div>
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="PAY_AMT6" placeholder="Amount paid in Last 6th Month (in New Taiwanese (NT) dollar)">
+                                    <input type="text" class="form-control" name="PAY_AMT4" placeholder="Amount paid in Last 4th Month (in Indian Rupees)">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="PAY_AMT5" placeholder="Amount paid in Last 5th Month (in Indian Rupees)">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="PAY_AMT6" placeholder="Amount paid in Last 6th Month (in Indian Rupees)">
                                 </div>
                             </div>
                         </div>
@@ -234,12 +230,10 @@
 
                </form></center>
            </div>
-
-           <footer>
-            <center><p style="color: white;font-size: 17px;font-weight: bold;margin-top: 10px;">By Vikas Bhat</p></center>
-            <center><p style="color: white;font-size: 17px;font-weight: bold;margin-top: 10px;"><span style="color:red">&#10084;</span>IN COLLABORATION WITH TECHNOCOLABS<span style="color:red">&#10084;</span></p></center>
-
-        </footer>
+           {% block body %}
+ 
+ 
+           {% endblock %}
     </body>
 
 
